@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+</head>
+<body>
+  <h1>Student Login</h1>
+  <form onsubmit="loginStudent(event)">
+    <label>Email: <input type="email" id="studentEmail" required></label><br><br>
+    <label>Password: <input type="password" id="studentPassword" required></label><br><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function loginStudent(event) {
+      event.preventDefault();
+      // Dummy check: replace with backend later
+      const email = document.getElementById('studentEmail').value;
+      const password = document.getElementById('studentPassword').value;
+      
+      if(email === "student@example.com" && password === "student123") {
+        window.location.href = "studentdashboard.html";
+      } else {
+        alert("Invalid credentials!");
+      }
+    }
+  </script>
+</body>
+</html>
