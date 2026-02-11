@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import Complaint from './models/Complaint.js';
 
 // MongoDB connection string (KEEP THIS AS IS)
-const MONGO_URI = "mongodb+srv://himaprasobh2005:12345@troubletrackers.vggtvds.mongodb.net/?retryWrites=true&w=majority&appName=TroubleTrackers";
+const MONGO_URI = process.env.MONGO_URI;
 
 // The single ImageKit URL to be applied to all complaints
 const IMAGEKIT_URL = "https://ik.imagekit.io/uvzn5qbpl/shivansh-singh-yZis-ijimJA-unsplash.jpg?updatedAt=1761099380843";
